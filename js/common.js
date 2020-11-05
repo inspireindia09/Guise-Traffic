@@ -188,28 +188,72 @@ var barChart = new Chart(barctx, {
         $('#reportrange').daterangepicker({
             startDate: start,
             endDate: end,
-            ranges: {
-               'Today': [moment(), moment()],
-               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-               'This Month': [moment().startOf('month'), moment().endOf('month')],
-               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            }
+            // ranges: {
+            //    'Today': [moment(), moment()],
+            //    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            //    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            //    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            //    'This Month': [moment().startOf('month'), moment().endOf('month')],
+            //    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            // }
         }, cb);
     
         cb(start, end);
     
     });
 
-
+var data_obj = 
+    [
+       {
+          "name": "Tiger Nixon",
+          "position": "System Architect",
+          "salary": "$320,800",
+          "start_date": "2011/04/25",
+          "office": "Edinburgh",
+          "extn": "5421"
+       },
+       {
+        "name": "Tiger Nixon",
+        "position": "System Architect",
+        "salary": "$320,800",
+        "start_date": "2011/04/25",
+        "office": "Edinburgh",
+        "extn": "5421"
+     },
+     {
+        "name": "Tiger Nixon",
+        "position": "System Architect",
+        "salary": "$320,800",
+        "start_date": "2011/04/25",
+        "office": "Edinburgh",
+        "extn": "5421"
+     },
+     {
+        "name": "Tiger Nixon",
+        "position": "System Architect",
+        "salary": "$320,800",
+        "start_date": "2011/04/25",
+        "office": "Edinburgh",
+        "extn": "5421"
+     }
+    ]
+ 
     //dropdown js end
     //data table js
     $('#report_table').DataTable( {
+        data: data_obj,
+        columns: [
+            { "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+        ],
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
+        ],
     } );
     // datatable js end
     

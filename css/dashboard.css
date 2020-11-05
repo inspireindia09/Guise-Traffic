@@ -676,7 +676,12 @@ button.btn.btn-default.dropdown-toggle {
   padding: 5px;
   white-space: normal;
 }
-
+.dropdown_wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
 .dropdown_wrap select {
   border-radius: 0;
   cursor: pointer;
@@ -688,7 +693,7 @@ button.btn.btn-default.dropdown-toggle {
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ccc;
-  width: 100%
+  width: 285px;
 }
 
 .head_wrap {
